@@ -23,3 +23,13 @@ GLOBAL OPTIONS:
    --version, -v           print the version
 
 ```
+
+## Install
+
+Either run:
+
+```
+go get github.com/wyattjoh/http-server
+```
+
+Or download the latest release: https://github.com/wyattjoh/http-server/releases/latest

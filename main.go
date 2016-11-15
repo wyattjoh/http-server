@@ -10,7 +10,8 @@ import (
 	"github.com/urfave/cli"
 )
 
-const version = "1.0.0"
+// VERSION is added by goxc during the build phase.
+var VERSION string
 
 func init() {
 	flag.Usage = func() {
@@ -62,7 +63,7 @@ func serve(ctx *cli.Context) error {
 
 func main() {
 	app := cli.NewApp()
-	app.Version = version
+	app.Version = VERSION
 	app.Name = "http-server"
 	app.Usage = "A simple no frills http file server"
 	app.Flags = []cli.Flag{
