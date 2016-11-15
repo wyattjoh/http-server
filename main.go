@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"log"
 	"net/http"
@@ -12,13 +11,6 @@ import (
 
 // VERSION is added by goxc during the build phase.
 var VERSION string
-
-func init() {
-	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage of http-server:\n")
-		flag.PrintDefaults()
-	}
-}
 
 func serve(ctx *cli.Context) error {
 	port := ctx.Int("port")
